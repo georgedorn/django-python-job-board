@@ -1,5 +1,4 @@
 from django.core.management.base import BaseCommand
-from django_python_job_board import models
 import BeautifulSoup
 import requests
 from datetime import datetime
@@ -8,7 +7,7 @@ from collections import defaultdict
 import HTMLParser
 
 from django.conf import settings
-from django_python_job_board.models import JobListing
+from python_job_board.models import JobListing
 
 board_url = getattr(settings, 'PYTHON_JOB_BOARD_URL', 
                     'http://www.python.org/community/jobs/index.html')
